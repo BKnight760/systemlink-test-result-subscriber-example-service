@@ -1,0 +1,31 @@
+{
+  "ServiceDescriptor": {
+    "name": "TestResultSubscriberExample",
+    "version": "1.0.0",
+    "startType": "SKYLINE_SERVICE",
+    "dependsOn": [
+      {
+        "name": "NoSqlDatabase",
+        "version": "^1.0.0",
+        "onSameNode": true
+      }
+    ],
+    "serviceGroups": [
+      {
+        "name": null,
+        "singleton": true,
+        "defaultInstanceCount": 1,
+        "startMode": "AUTO",
+        "environmentVariables": {
+          "PYTHONHOME": "",
+          "PYTHONPATH": "C:\\Program Files\\National Instruments\\Shared\\Skyline\\TestResultSubscriberExample"
+        },
+        "properties": {
+          "Arguments": "-m systemlink.testresultsubscriberexampleservice.main --silent",
+          "Path": "C:\\Program Files\\National Instruments\\Shared\\Skyline\\Python\\3.7\\python.exe",
+          "UserAccountName": "*S-1-5-19"
+        }
+      }
+    ]
+  }
+}
