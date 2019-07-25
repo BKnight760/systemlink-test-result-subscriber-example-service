@@ -13,3 +13,17 @@ Using the SystemLink Server Configuration application, click restart to re-launc
 The Test Result Subscriber is a basic example that can be modified to perform tasks when a test result notification message is received.  The example implementation shows how the service subscribes to specific messages and defines callbacks to run when those events occur.
 
 Modify the ```/Program Files/Skyline/TestResultSubscriberExample/systemlink/testresultsubscriberexampleservice/handlers/amqp_handlers.py``` file's ```test_result_broadcast``` method to insert your custom code.
+
+    def test_result_broadcast(
+            self,
+            generic_message: GenericMessage,
+        ):
+        """
+        :param generic_message: An object representing the AMQP message.
+        """
+        # Log that the broadcast was received.
+        # This is logged at ERROR level so that it will appear in the log.
+        # Logging level should be decreased or removed once implementation and debugging is completed.
+        # Optionally, logging could be done to a tracepoint instead.
+        LOGGER.error('received test result broadcast!')
+        # TODO: Customize the code here to perform your task
