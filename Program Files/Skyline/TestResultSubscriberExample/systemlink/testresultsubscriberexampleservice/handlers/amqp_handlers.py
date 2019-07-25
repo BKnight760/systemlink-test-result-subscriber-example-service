@@ -91,4 +91,9 @@ class AmqpHandler():
         """
         :param generic_message: An object representing the AMQP message.
         """
+        # Log that the broadcast was received.
+        # This is logged at ERROR level so that it will appear in the log.
+        # Logging level should be decreased or removed once implementation and debugging is completed.
+        # Optionally, logging could be done to a tracepoint instead.
         LOGGER.error('received test result broadcast!')
+        # TODO: Customize the code here to perform your task
